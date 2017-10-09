@@ -6,28 +6,40 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <p>Welcome to your <%= subtitle %></p>
 
-    <section>
-      <h2>Upload your photo</h2>
+    <section class="upload">
+      <h2>Upload a image</h2>
       <form action="/upload" method="post" enctype="multipart/form-data">
+        Author name:<br>
         <input type="text" name="author" value="Autor de la obra">
+        Artwork name:<br>
         <input type="text" name="name" value="titulo de la foto">
+        File to upload:
         <input type="file" name="file">
+        Description: <br>
+        <input type="text" name="description" value="description">
+        upload!
         <input type="submit" value="Save">
       </form>
     </section>
 
     <section>
+      <h2 class="list-tittle">List of artworks exposed</h2>
         <% pictures.forEach(function(picture) { %>
-          <h3 class="picture-name">Título de la obra: <%= picture.name %></h3>
-          <h3 class="picture-author">Autor: <%= picture.author %></h3>
-          <h4 class="picture-id"><%= picture._id %></h3>
-          <img src="<%= picture.pic_path %>" alt="<%= picture.pic_name %>" />
-          <form action="<%= picture._id%>/delete" method="POST">
-            <button type="submit">Delete artwork</button>
-          </form>
+          <div class="picture-block">
+            <h3>Artwork: </h3>
+            <div class="picture-name"><%= picture.name %></div>
+            <h4 class="picture-author">Autor: <%= picture.author %></h4>
+            <h4 class="picture-id">Catalogo: <%= picture._id %></h4>
+            <img src="<%= picture.pic_path %>" alt="<%= picture.pic_name %>" />
+            <div class="description">Description: <%=picture.description%></div>
+            <form action="<%= picture._id%>/delete" method="POST">
+              <button type="submit">Delete artwork</button>
+            </form>
+          </div>
         <% })%>
+
     </section>
 
 

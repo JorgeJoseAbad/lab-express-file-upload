@@ -5,13 +5,26 @@ body {
 a {
   color: #00B7FF; }
 
+.upload {
+  background-color: #dcdc6e; }
+
+.list-tittle {
+  background-color: #6e9c9c; }
+
+.upload input {
+  display: block; }
+
+.picture-block {
+  margin-top: 20px;
+  border-top: 2px solid red; }
+
 img {
   width: 200px;
   height: auto; }
 
 .picture-name {
   color: blue;
-  border-top: 2px solid red; }
+  display: inline; }
 
 .picture-id {
   font-size: 10px;

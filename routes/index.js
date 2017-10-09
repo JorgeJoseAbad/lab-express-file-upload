@@ -21,6 +21,7 @@ router.post('/upload', upload.single('file'), function(req, res){
   pic = new Picture({
     author: req.body.author,
     name: req.body.name,
+    description: req.body.description,
     pic_path: `/uploads/${req.file.filename}`,
     pic_name: req.file.originalname
   });

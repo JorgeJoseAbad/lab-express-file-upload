@@ -12,7 +12,8 @@ var mongoose=require('mongoose');
 
 var app = express();
 
-app.locals.title="Cargafotos";
+app.locals.title="Image galery";
+app.locals.subtitle="Exhibición of Art";
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
