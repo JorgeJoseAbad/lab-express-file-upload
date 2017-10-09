@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= editTitle %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+
+        <section class="update">
+          <h2>update a image <%= editTitle %></h2>
+          <img src="<%= picture.pic_path %>" alt="<%= picture.pic_name %>" />
+          <form action="/<%=picture._id%>/edit" method="post">
+            Author name:<br>
+            <input type="text" name="author" value="<%=picture.author%>">
+            Artwork name:<br>
+            <input type="text" name="name" value="<%=picture.name%>">
+            Description: <br>
+            <input type="text" name="description" value="<%=picture.description%>">
+            upload!
+            <input type="submit" value="Save changes">
+          </form>
+        </section>
+
+      </body>
+    </html>

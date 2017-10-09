@@ -32,6 +32,37 @@ router.post('/upload', upload.single('file'), function(req, res){
 });
 
 
+router.get('/:id/edit', function(req, res, next) {
+  const id=req.params.id;
+  console.log(id);
+  Picture.findById(id,(err, picture) => {
+    console.log(picture);
+    if (err) { return next(err); }
+    res.render('edit', {picture:picture});
+  });
+});
+
+router.post('/:id/edit',function(req,res,next){
+  const productId=req.params.id;
+  console.log(req.body);
+  /*
+   * Create a new object with all of the information from the request body.
+   * This correlates directly with the schema of Product
+   */
+  const updates = {
+      name: req.body.name,
+      author: req.body.author,
+      description: req.body.description,
+  };
+  console.log(updates);
+
+  Picture.findByIdAndUpdate(productId, updates, (err, picture) => {
+    console.log(picture);
+    if (err){ return next(err); }
+    return res.redirect('/');
+  });
+});
+
 /* to delete file from publics, fs.unlink of node.js*/
 router.post('/:id/delete',function(req,res){
 

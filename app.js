@@ -14,6 +14,7 @@ var app = express();
 
 app.locals.title="Image galery";
 app.locals.subtitle="Exhibición of Art";
+app.locals.editTitle="Edit image data";
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
