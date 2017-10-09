@@ -11,17 +11,23 @@
     <section>
       <h2>Upload your photo</h2>
       <form action="/upload" method="post" enctype="multipart/form-data">
-        <input type="text" name="name">
+        <input type="text" name="author" value="Autor de la obra">
+        <input type="text" name="name" value="titulo de la foto">
         <input type="file" name="file">
         <input type="submit" value="Save">
       </form>
     </section>
 
     <section>
-      <% pictures.forEach(function(picture) { %>
-        <h3><%= picture.name %></h3>
-        <img src="<%= picture.pic_path %>" alt="<%= picture.pic_name %>" />
-      <% })%>
+        <% pictures.forEach(function(picture) { %>
+          <h3 class="picture-name">Título de la obra: <%= picture.name %></h3>
+          <h3 class="picture-author">Autor: <%= picture.author %></h3>
+          <h4 class="picture-id"><%= picture._id %></h3>
+          <img src="<%= picture.pic_path %>" alt="<%= picture.pic_name %>" />
+          <form action="<%= picture._id%>/delete" method="POST">
+            <button type="submit">Delete artwork</button>
+          </form>
+        <% })%>
     </section>
 
 

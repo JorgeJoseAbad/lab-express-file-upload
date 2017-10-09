@@ -5,9 +5,17 @@ body {
 a {
   color: #00B7FF; }
 
-img{
+img {
   width: 200px;
-  height: auto;
-}
+  height: auto; }
+
+.picture-name {
+  color: blue;
+  border-top: 2px solid red; }
+
+.picture-id {
+  font-size: 10px;
+  font-style: italic;
+  font-family: "Goudy Bookletter 1911", sans-serif; }
 
 /*# sourceMappingURL=style.css.map */
