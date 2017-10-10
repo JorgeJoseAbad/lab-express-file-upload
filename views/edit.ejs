@@ -9,7 +9,7 @@
 
 
         <section class="update">
-          <h2>update a image <%= editTitle %></h2>
+          <h2><%= editTitle %></h2>
           <img src="<%= picture.pic_path %>" alt="<%= picture.pic_name %>" />
           <form action="/<%=picture._id%>/edit" method="post">
             Author name:<br>
