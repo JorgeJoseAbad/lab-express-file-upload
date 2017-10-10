@@ -1,14 +1,15 @@
 var express = require('express');
 var router = express.Router();
 var multer  = require('multer');
-const fs = require('fs'); //pongo el require, pero no seguro
-                          //que necesite algun tipo de install
+const fs = require('fs');
+
 
 const Picture = require('../models/pictures');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   Picture.find((err, pictures) => {
+    if (err) return next(err);
     res.render('index', {pictures});
   });
 });

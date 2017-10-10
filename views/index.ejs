@@ -5,17 +5,20 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+
+
     <h1><%= title %></h1>
     <p>Welcome to your <%= subtitle %></p>
-
+    <pre>An elemental exercise about CRUD (create, read, update, delete), operations with products,
+      in this case artworks with includes an image, and file upload and delete</pre>
     <section class="upload">
-      <h2>Upload a image</h2>
+      <h2>Upload new artwork</h2>
       <form action="/upload" method="post" enctype="multipart/form-data">
         Author name:<br>
         <input type="text" name="author" value="Autor de la obra">
         Artwork name:<br>
         <input type="text" name="name" value="titulo de la foto">
-        File to upload:
+        Image file to upload:
         <input type="file" name="file">
         Description: <br>
         <input type="text" name="description" value="description">
@@ -28,21 +31,22 @@
       <h2 class="list-tittle">List of artworks exposed</h2>
         <% pictures.forEach(function(picture) { %>
           <div class="picture-block">
-            <h3>Artwork: </h3>
+            <h3 class="arwork-tittle">Artwork tittle: </h3>
             <div class="picture-name"><%= picture.name %></div>
             <h4 class="picture-author">Autor: <%= picture.author %></h4>
             <h4 class="picture-id">Catalogo: <%= picture._id %></h4>
             <img src="<%= picture.pic_path %>" alt="<%= picture.pic_name %>" />
-            <div class="description">Description: <%=picture.description%></div>
-            <form action="<%= picture._id%>/delete" method="POST">
-              <button type="submit">Delete artwork</button>
-            </form>
-            <form action="<%= picture._id%>/edit" method="GET">
-              <button type="submit">Update Text</button>
-            </form>
+            <div class="description"><b>Description:</b> <%=picture.description%></div>
+            <div class="buttons">
+                <form action="<%= picture._id%>/delete" method="POST">
+                  <button  type="submit">Delete artwork</button>
+                </form>
+                <form action="<%= picture._id%>/edit" method="GET">
+                  <button  type="submit">Update Text</button>
+                </form>
+            </div>
           </div>
         <% })%>
-
     </section>
 
 
