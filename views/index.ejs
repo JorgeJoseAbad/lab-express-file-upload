@@ -15,9 +15,9 @@
       <h2>Upload new artwork</h2>
       <form action="/upload" method="post" enctype="multipart/form-data">
         Author name:<br>
-        <input type="text" name="author" value="Autor de la obra">
+        <input type="text" name="author" value="Author of the work">
         Artwork name:<br>
-        <input type="text" name="name" value="titulo de la foto">
+        <input type="text" name="name" value="title of the image">
         Image file to upload:
         <input type="file" name="file">
         Description: <br>
@@ -34,7 +34,7 @@
             <h3 class="arwork-tittle">Artwork tittle: </h3>
             <div class="picture-name"><%= picture.name %></div>
             <h4 class="picture-author">Autor: <%= picture.author %></h4>
-            <h4 class="picture-id">Catalogo: <%= picture._id %></h4>
+            <h4 class="picture-id">Catalogue ID: <%= picture._id %></h4>
             <img src="<%= picture.pic_path %>" alt="<%= picture.pic_name %>" />
             <div class="description"><b>Description:</b> <%=picture.description%></div>
             <div class="buttons">

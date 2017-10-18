@@ -12,7 +12,7 @@ var mongoose=require('mongoose');
 
 var app = express();
 
-app.locals.title="Image galery";
+app.locals.title="Image gallery";
 app.locals.subtitle="Exhibición of Art";
 app.locals.editTitle="Edit image data";
 
