@@ -1,5 +1,7 @@
 /public/uploads
 
+.env
+
 # Logs
 logs
 *.log

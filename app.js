@@ -1,3 +1,4 @@
+require("dotenv").config();
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -34,7 +35,7 @@ app.use(require('node-sass-middleware')({
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-mongoose.connect('mongodb://localhost/lab-express-file-upload');
+mongoose.connect(process.env.MONGODB_URI);
 
 app.use('/', index);
 //app.use('/users', users);
