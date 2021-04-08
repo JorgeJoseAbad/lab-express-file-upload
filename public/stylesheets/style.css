@@ -1,68 +1,85 @@
 body {
   width: auto;
   padding: 10px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
 
 a {
-  color: #00B7FF; }
+  color: #00B7FF;
+}
 
 pre {
   width: 300px;
   font-style: normal;
   font-weight: bold;
-  text-align: justify; }
+  text-align: justify;
+}
 
 .picture-name {
-  display: inline-block; }
+  display: inline-block;
+}
 
 .upload {
   background-color: #dcdc6e;
-  padding-left: 20px; }
+  padding-left: 20px;
+}
 
 .list-tittle {
-  background-color: #6e9c9c; }
+  background-color: #6e9c9c;
+  margin-top: 2%;
+}
 
 .upload input {
-  display: block; }
+  display: block;
+}
 
 .picture-block {
   width: 300px;
   height: auto;
   margin-top: 30px;
-  border-top: 2px solid #fa9696; }
+  border-top: 2px solid #fa9696;
+}
 
 img {
   width: 300px;
-  height: auto; }
+  height: auto;
+}
 
 .arwork-tittle, .picture-name {
-  display: inline-block; }
+  display: inline-block;
+}
 
 .arwork-tittle {
   margin-top: 5px;
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+}
 
 .picture-name {
   color: #1c029e;
   margin-top: 5px;
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+}
 
 .picture-author {
   margin-top: 5px;
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+}
 
 .picture-id {
   font-size: 10px;
   font-style: italic;
-  font-family: "Goudy Bookletter 1911", sans-serif; }
+  font-family: "Goudy Bookletter 1911", sans-serif;
+}
 
 .description {
   padding: 10px;
   text-align: justify;
-  background-color: #d2e6f0; }
+  background-color: #d2e6f0;
+}
 
 .buttons button {
   margin: 0 10px 10px 10px;
-  float: left; }
+  float: left;
+}
 
 /*# sourceMappingURL=style.css.map */
