@@ -10,6 +10,10 @@ var index = require('./routes/index');
 //var users = require('./routes/users');
 var mongoose=require('mongoose');
 
+mongoose.connect(process.env.MONGODB_URI,{
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
 
 var app = express();
 
@@ -34,8 +38,6 @@ app.use(require('node-sass-middleware')({
   sourceMap: true
 }));
 app.use(express.static(path.join(__dirname, 'public')));
-
-mongoose.connect(process.env.MONGODB_URI);
 
 app.use('/', index);
 //app.use('/users', users);
